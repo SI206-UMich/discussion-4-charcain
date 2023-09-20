@@ -27,21 +27,23 @@ class Rectangle():
     #       False otherwise
 
     def verify_input(self): 
-        if self.width == self.height: 
+        if self.width >= 0 and self.height >= 0: 
             return True 
         else: 
             return False 
 
 
-
     # Create the "area" method
-    #
+    def area(self): 
+        if self.verify_input() == False: 
+            return "Invalid input"
+        else: 
+            return (self.width*self.height)
     # It first verifies inputs and return "Invalid input" if they are invalid.
     # Otherwise, it returns the area of the rectangle.
 
-    # YOUR CODE HERE
-
-
+#test_rect = Rectangle(8, 0)
+#print(test_rect.area())
 
     # Create the "perimeter" method
     #
