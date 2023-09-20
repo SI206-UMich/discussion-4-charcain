@@ -1,22 +1,24 @@
 class Rectangle():
+
     # Create the constructor "__init__" method
     # Arguments: width (an ingeter), height (an integer)
-    # 
+
     # It sets an instance variable, "width" to the passed argument, width
     # It sets an instance variable, "height" to the passed argument, height
 
     # YOUR CODE HERE
-
-
+    def __init__(self, width, height): 
+        self.width = width 
+        self.height = height 
 
     # Create the "__str__" method
     #
     # It returns a string, 
     #       "A rectangle with width ____ and height ____"
 
-    # YOUR CODE HERE
-
-
+    def __str__(self): 
+        return "A rectangle with width " + str(self.width) + " height " + str(self.height)
+ 
 
     # Create the "verify_input" method
     #
@@ -24,7 +26,11 @@ class Rectangle():
     #       True if the width and height are positive numbers
     #       False otherwise
 
-    # YOUR CODE HERE
+    def verify_input(self): 
+        if self.width == self.height: 
+            return True 
+        else: 
+            return False 
 
 
 
@@ -46,7 +52,7 @@ class Rectangle():
     
 
 
-def main():
+""" def main():
     r = Rectangle(10, 10)
     print(r)
     print("Area:", r.area())
@@ -60,4 +66,4 @@ def main():
     print()
 
 if __name__ == "__main__":
-    main()
+    main() """
